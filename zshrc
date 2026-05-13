@@ -83,3 +83,8 @@ fpath=(/Users/Apple/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+
+push() {
+  local branch=$(git rev-parse --abbrev-ref HEAD)
+  git push origin "$branch"
+}
